@@ -1,50 +1,85 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylecheet" href="style.css"/>
     <title>CS 494P LED Project</title>
 </head>
     <h1>LED Project</h1>
-    <body>
-        <!--Start of LED Group-->
 
-        <div class="led">
-            <label class="led-wrapper">
-                <span class="led-tile">
-                    "Array 1"
-                </span>
-            </label>
-        </div>
 
-        <!--End of LED Group-->
+<body>
 
-    <script>
-        /*
-        int i = 0;
-        while(i < NumOfLights) {
-            print statement below;
-        }
-        */
-    </script>
+<form action="/form_handler" method="POST">
+  
+  <label for="target">Initial Target LED:</label>
+  <input type="text" 
+  id="initial_led_target" 
+  placeholder="1" 
+  name="initial_led_target" ><br><br>
 
-        <!--Start of Array Group-->
-        <div class="array-group">
-<!--copy paste lines from here-->
-            <div class="array">
-                <label class="array-wrapper">
-                    <input type="array" class="array-input">
-                    <span class="array-tile">
-                        <span class="array-icon">
-                            <!--place colored box here, icon-->
-                        </span>
-                    <span class="array-label">Name Here</span>
-<!--copy paste to here, currently a fixed amount, maybe check how many strips are connected and display that many by variable. If we have time-->
+  <label for="target">Brightness:</label>
+  <input type="text" 
+  id="brightness"
+  placeholder="100" 
+  name="brightness"><br><br>
 
-                    </span>
-                </label>
-            </div>
+  <label for="target">Color:</label>
+  <input type="color" 
+  id="color"
+  name="color"><br><br>
 
-        </div>
-        <!--End of Array group-->
+  <label for="target">Milliseconds to next position:</label>
+  <input type="text" 
+  id="ms_to_next_position"
+  placeholder="10" 
+  name="ms_to_next_position"><br><br>
 
-    </body>
+  <label for="target">Consecutive LEDs on:</label>
+  <input type="text" 
+  id="total_leds_on"
+  placeholder="1" 
+  name="total_leds_on"><br><br>
+
+  <label for="target">Type of wave for control of a parameter:</label>
+  <div>
+    <input type="radio" id="type_of_wave" name="type_of_wave1" value="1" 
+    checked/>
+    <label for="type_of_wave1">Square</label>
+    <input type="radio" id="type_of_wave" name="type_of_wave2" value="2" />
+    <label for="type_of_wave2">Triangular</label>
+    <input type="radio" id="type_of_wave" name="type_of_wave3" value="3" />
+    <label for="type_of_wave3">Sine</label>
+  </div><br><br>
+
+  <label for="target">Parameter controlled by amplitude of wave:</label>
+  <div>
+    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude0" value="1" 
+    checked/>
+    <label for="parameter_for_amplitude0">None</label>
+    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude1" value="2" />
+    <label for="parameter_for_amplitude1">Hue</label>
+    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude2" value="3" />
+    <label for="parameter_for_amplitude2">Brightness</label>
+    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude3" value="3" />
+    <label for="parameter_for_amplitude3">ms to next pos</label>
+  </div><br><br>
+  
+  <label for="target">amplitude range (in %):</label>
+  <input type="text" 
+  id="amplitude_range"
+  placeholder="100" 
+  name="amplitude_range"><br><br>
+
+  <label for="target">wave's beats per minute:</label>
+  <input type="text" 
+  id="beats_per_minute"
+  placeholder="125" 
+  name="beats_per_minute"><br><br>
+
+    <div>
+    <button>Submit</button>
+    </div>
+</form>
+
+</body>
 </html>

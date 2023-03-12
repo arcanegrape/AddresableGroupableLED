@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylecheet" href="style.css"/>
+  <!-- <link rel="stylesheet" href="style.css"/> --> 
     <title>CS 494P LED Project</title>
 </head>
     <h1>LED Project</h1>
@@ -14,13 +14,13 @@
   <label for="target">Initial Target LED:</label>
   <input type="text" 
   id="initial_led_target" 
-  placeholder="1" 
+  initial_target_default="1" 
   name="initial_led_target" ><br><br>
 
   <label for="target">Brightness:</label>
   <input type="text" 
   id="brightness"
-  placeholder="100" 
+  brightness_default="100" 
   name="brightness"><br><br>
 
   <label for="target">Color:</label>
@@ -42,26 +42,26 @@
 
   <label for="target">Type of wave for control of a parameter:</label>
   <div>
-    <input type="radio" id="type_of_wave" name="type_of_wave1" value="1" 
+    <input type="radio" id="square" name="type_of_wave" value="Square" 
     checked/>
-    <label for="type_of_wave1">Square</label>
-    <input type="radio" id="type_of_wave" name="type_of_wave2" value="2" />
-    <label for="type_of_wave2">Triangular</label>
-    <input type="radio" id="type_of_wave" name="type_of_wave3" value="3" />
-    <label for="type_of_wave3">Sine</label>
+    <label for="square">Square</label>
+    <input type="radio" id="triangular" name="type_of_wave" value="Triangular" />
+    <label for="triangular">Triangular</label>
+    <input type="radio" id="sine" name="type_of_wave" value="Sine" />
+    <label for="sine">Sine</label>
   </div><br><br>
 
   <label for="target">Parameter controlled by amplitude of wave:</label>
   <div>
-    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude0" value="1" 
+    <input type="radio" id="none" name="parameter_for_amplitude" value="1" 
     checked/>
-    <label for="parameter_for_amplitude0">None</label>
-    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude1" value="2" />
-    <label for="parameter_for_amplitude1">Hue</label>
-    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude2" value="3" />
-    <label for="parameter_for_amplitude2">Brightness</label>
-    <input type="radio" id="parameter_for_amplitude" name="parameter_for_amplitude3" value="3" />
-    <label for="parameter_for_amplitude3">ms to next pos</label>
+    <label for="none">None</label>
+    <input type="radio" id="hue" name="parameter_for_amplitude" value="2" />
+    <label for="hue">Hue</label>
+    <input type="radio" id="brightness" name="parameter_for_amplitude" value="3" />
+    <label for="brightness">Brightness</label>
+    <input type="radio" id="mstopos" name="parameter_for_amplitude" value="3" />
+    <label for="mstopos">ms to next pos</label>
   </div><br><br>
   
   <label for="target">amplitude range (in %):</label>

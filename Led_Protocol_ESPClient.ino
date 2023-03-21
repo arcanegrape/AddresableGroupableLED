@@ -5,8 +5,8 @@
 #include <esp_now.h>
 
 // Access point network credentials
-const char* ssid     = "Room of Requirement";
-const char* password = "threepaces";
+const char* ssid     = "Tenda_61F820";
+const char* password = "Ch@rlie123";
 
 //Set web server port
 AsyncWebServer server(80);
@@ -56,13 +56,13 @@ const char index_html[] PROGMEM = R"rawliteral(
   <label for="target">Initial Target LED:</label>
   <input type="text" 
   id="initial_led_target" 
-  placeholder="1" 
+  value="1" 
   name="initial_led_target" ><br><br>
 
   <label for="target">Brightness:</label>
   <input type="text" 
   id="brightness"
-  placeholder="100" 
+  value="100" 
   name="brightness"><br><br>
 
   <label for="target">Color:</label>
@@ -73,13 +73,13 @@ const char index_html[] PROGMEM = R"rawliteral(
   <label for="target">Milliseconds to next position:</label>
   <input type="text" 
   id="ms_to_next_position"
-  placeholder="10" 
+  value="10" 
   name="ms_to_next_position"><br><br>
 
   <label for="target">Consecutive LEDs on:</label>
   <input type="text" 
   id="total_leds_on"
-  placeholder="1" 
+  value="1" 
   name="total_leds_on"><br><br>
 
   <label for="target">Type of wave for control of a parameter:</label>
@@ -108,22 +108,62 @@ const char index_html[] PROGMEM = R"rawliteral(
   <label for="target">amplitude range (in %):</label>
   <input type="text" 
   id="amplitude_range"
-  placeholder="100" 
+  value="100" 
   name="amplitude_range"><br><br>
 
   <label for="target">wave's beats per minute:</label>
   <input type="text" 
   id="beats_per_minute"
-  placeholder="125" 
+  value="60" 
   name="beats_per_minute"><br><br>
+
+
+  <label for="Priority">Priority of Message:</label>
+
+<select name="Priority" id="priority">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
 
     <div>
     <button>Submit</button>
     </div>
 </form>
 
+
+<br><br>
+<label for="Group1">Assign LEDStrip MAC 40:22:D8:77:22:18 to group: </label>
+
+<select name="Group1" id="group">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <p>Current group:</p><b>1</b>
+</select>
+
+<br><br>
+
+<label for="Group2">Assign LEDStrip MAC C0:49:EF:E5:64:24 to group: </label>
+
+<select name="Group2" id="group">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <p>Current group:</p><b>1</b>
+</select>
+
+
+
 </body>
 </html>
+
 
 )rawliteral";
 
